@@ -1,6 +1,9 @@
 #ifndef __KEYBORAD_H__
 #define __KEYBORAD_H__
 
+#include <stdint.h>
+
+#define Keyboard_null							0
 #define Keyboard_a                4   // Keyboard a and A
 #define Keyboard_b                5   // Keyboard b and B
 #define Keyboard_c                6   // Keyboard c and C
@@ -105,5 +108,10 @@
 #define Keyboard_RightShift       229
 #define Keyboard_RightAlt         230
 #define Keyboard_RightWindows     231
+
+void Keyboard_OneTime(uint8_t *hid_data, uint32_t time);
+void Keyboard_Clear(void);
+void Keyboard_Send(uint8_t *hid_data);
+uint8_t Keyboard_AsciiToHid(const char ascii);
 
 #endif

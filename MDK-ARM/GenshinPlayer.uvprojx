@@ -653,9 +653,24 @@
           <GroupName>App</GroupName>
           <Files>
             <File>
-              <FileName>keyborad.h</FileName>
+              <FileName>genshin_player.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\App\include\keyborad.h</FilePath>
+              <FilePath>..\App\include\genshin_player.h</FilePath>
+            </File>
+            <File>
+              <FileName>genshin_player.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\src\genshin_player.c</FilePath>
+            </File>
+            <File>
+              <FileName>keyboard.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\src\keyboard.c</FilePath>
+            </File>
+            <File>
+              <FileName>keyboard.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\include\keyboard.h</FilePath>
             </File>
           </Files>
         </Group>

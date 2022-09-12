@@ -34,8 +34,7 @@ hid code list: https://blog.csdn.net/bona020/article/details/101289147
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "usbd_hid.h"
-#include "keyborad.h"
+#include "genshin_player.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -66,7 +65,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-extern USBD_HandleTypeDef hUsbDeviceFS;
+
 /* USER CODE END 0 */
 
 /**
@@ -102,20 +101,15 @@ int main(void)
   MX_USB_DEVICE_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
-	uint8_t txbuffer[8]= {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
-	uint8_t sendbuffer[8]={0x00,0x00,Keyboard_h,0x00,0x00,0x00,0x00,0x00};
-	HAL_Delay(3000);
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		
-		USBD_HID_SendReport(&hUsbDeviceFS,sendbuffer,8);
-		HAL_Delay(500);
-		USBD_HID_SendReport(&hUsbDeviceFS,txbuffer,8);
-		HAL_Delay(1000);
+		HAL_Delay(3000);
+		genshin_play_start();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
