@@ -23,10 +23,11 @@ void hid_data_clear(){
 }
 
 void keyboard_press(uint32_t delay){
+	const uint8_t press_time = 20;
 	Keyboard_Send(g_hid_data);
-	HAL_Delay(70);
+	HAL_Delay(press_time);
 	Keyboard_Clear();
-	HAL_Delay(delay - 70);
+	HAL_Delay(delay - press_time);
 }
 
 void string_to_hid(const char* str, uint32_t delay){
