@@ -109,7 +109,7 @@ int main(void)
   while (1)
   {
 		HAL_Delay(3000);
-		genshin_play_start();
+		genshin_start();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

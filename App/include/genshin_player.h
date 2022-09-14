@@ -18,7 +18,7 @@
 *********/
 
 typedef struct{
-	uint8_t *keys;
+	char *keys;
 	uint32_t keys_len;
 	uint32_t delay;
 }genshin_beat;
@@ -26,9 +26,10 @@ typedef struct{
 typedef struct{
 	genshin_beat *beats;
 	uint32_t beats_count;
-	uint32_t time_all;
+	uint32_t beats_size;
+	uint64_t time_all;
 }genshin_score;
 
-void genshin_play_start(void);
+void genshin_start(void);
 
 #endif
