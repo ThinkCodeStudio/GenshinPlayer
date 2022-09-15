@@ -30,6 +30,7 @@ typedef struct{
 	uint64_t time_all;
 }genshin_score;
 
-void genshin_start(void);
+void genshin_setup(void);
+void genshin_loop(void);
 
 #endif

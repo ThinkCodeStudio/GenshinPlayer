@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../USB_DEVICE/App;../USB_DEVICE/Target;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/HID/Inc;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../Middlewares/Third_Party/FatFs/src;../Middlewares/Third_Party/FatFs/src/drivers;..\App\include</IncludePath>
+              <IncludePath>../Core/Inc;../USB_DEVICE/App;../USB_DEVICE/Target;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/HID/Inc;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../Middlewares/Third_Party/FatFs/src;../Middlewares/Third_Party/FatFs/src/drivers;..\App\include;..\Lib\TFTdisplay\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -671,6 +671,21 @@
               <FileName>keyboard.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\App\include\keyboard.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Lib</GroupName>
+          <Files>
+            <File>
+              <FileName>lcd_header.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Lib\TFTdisplay\src\lcd_header.c</FilePath>
+            </File>
+            <File>
+              <FileName>tft_lcd_fsmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Lib\TFTdisplay\src\tft_lcd_fsmc.c</FilePath>
             </File>
           </Files>
         </Group>

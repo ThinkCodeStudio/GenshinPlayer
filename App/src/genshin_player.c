@@ -3,6 +3,7 @@
 #include "main.h"
 #include "string.h"
 #include <stdlib.h>
+#include "lcd_header.h"
 
 //一节拍的标准延时
 const uint32_t g_one_beat = (60.0/128)*1000;
@@ -50,7 +51,7 @@ void genshin_init(uint32_t r_beat_size){
 	g_score.time_all = 0;
 }
 
-void genshin_load_key(const char* keys, uint8_t r_delay){
+void genshin_load_key(const char *keys, uint32_t r_delay){
 	if(g_score.beats_count >= g_score.beats_size)
 		return;
 	g_score.beats[g_score.beats_count].keys = malloc(sizeof(char)*strlen(keys));
@@ -537,7 +538,11 @@ void genshin_play(){
 	}
 }
 
-void genshin_start(){
+void genshin_setup(){
+	LCD_Init(HAL_Delay);
+}
+
+void genshin_loop(){
 	genshin_play();
 	/*
 	string_to_hid("ndh", g_one_beat*2);
@@ -766,7 +771,7 @@ void genshin_start(){
 	string_to_hid("w", g_one_beat/2);
 	string_to_hid("q", g_one_beat/2);
 	string_to_hid("w", g_one_beat/2);
-	//***
+	//
 	string_to_hid("xne", g_one_beat/2);
 	string_to_hid("xnr", g_one_beat/2);
 	string_to_hid("cme", g_one_beat/2);
@@ -850,7 +855,7 @@ void genshin_start(){
 	string_to_hid("q", g_one_beat/2);
 	
 	string_to_hid("nj", g_one_beat/2);
-	//***
+	//
 	string_to_hid("q", g_one_beat/2);
 	
 	string_to_hid("ad", g_one_beat/2);
