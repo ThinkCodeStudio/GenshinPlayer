@@ -44,7 +44,9 @@ void string_to_hid(const char* str, uint32_t delay){
 
 void genshin_play(score_t* score){
 	for(int i=0; i < score->beats_count ;i++){
+		display_beat_next(score, i);
 		string_to_hid(score->beats[i].keys, score->beats[i].delay);
+		
 	}
 }
 
@@ -55,6 +57,7 @@ void genshin_setup(){
 }
 
 void genshin_loop(){
+	HAL_Delay(1000);
 	genshin_play(score_get());
 	/*
 	string_to_hid("ndh", g_one_beat*2);
