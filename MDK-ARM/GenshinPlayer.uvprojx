@@ -672,6 +672,26 @@
               <FileType>5</FileType>
               <FilePath>..\App\include\keyboard.h</FilePath>
             </File>
+            <File>
+              <FileName>display.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\include\display.h</FilePath>
+            </File>
+            <File>
+              <FileName>display.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\src\display.c</FilePath>
+            </File>
+            <File>
+              <FileName>score.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\include\score.h</FilePath>
+            </File>
+            <File>
+              <FileName>score.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\src\score.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
